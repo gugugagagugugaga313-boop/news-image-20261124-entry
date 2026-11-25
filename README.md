@@ -15,17 +15,22 @@ a footer ticker:
 1. **Korea scrambles jets** — Russian planes enter South Korea's air
    defence zone near Ulleung Island; jets go up and the island alert
    is lifted after three minutes.
-2. **Chess crown, Game 1** — Gukesh defends his world title against
-   Sindarov in Geneva; both players are 20, the youngest final ever.
-3. **New train links India and Nepal** — Modi and Nepal's prime
-   minister flag off the Saryu-Kamala Express, Ayodhya to Janakpur Dham.
-4. **US blacklists Alibaba unit** — Singapore unit Apex is accused
-   over chip diversion; Alibaba denies wrongdoing.
-5. **Fiji shuts schools in drought** — all schools shut for five days
-   from 30 November as the El Nino drought deepens in the Pacific.
-6. **Also today** — Brazil's lower house backs Lula's fiscal plan.
+2. **Huawei guilty in US trial** — a Brooklyn jury convicts Huawei on
+   10 of 12 counts (bank fraud, trade-secret theft, Iran sanctions);
+   cleared of racketeering and obstruction.
+3. **Mines hit tankers in Hormuz** — Iran says four tankers were hit
+   by mines; the IRGC claims a strike on a container ship.
+4. **Chess crown, Game 1** — Gukesh holds Sindarov to a draw in
+   Geneva, 0.5–0.5; both players are 20, the youngest final ever.
+5. **Turkish helicopter crash** — an AS-532 Cougar goes down near
+   Eskisehir during training; five crew killed.
+6. **Also today** — gunmen hold 30 hostage in a Cartagena supermarket.
 
-Every story was first reported on 24 November 2026. Stories from
+Every story was first reported on 24 November 2026. This is the final
+version, rebuilt from the full day's news: the first version pictured
+four stories that turned out to be 23 November events (the Alibaba
+Apex blacklist, the Brazil fiscal vote, the Saryu-Kamala flag-off,
+Fiji's school closure) and they are swapped out here. Stories from
 earlier in the week (the COP31 collapse, the Indonesia factory fire,
 the El Chapo Isidro capture, the Nvidia CEO return) were checked and
 deliberately left out: they happened on 21–23 November, not on this day.

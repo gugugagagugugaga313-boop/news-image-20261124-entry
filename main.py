@@ -6,14 +6,20 @@ circle / triangle primitives, and a 5x7 bitmap font scaled up so
 every label stays legible at 300 pixels across. No network, no
 randomness, no wall clock: two runs write identical bytes.
 
-Stories (all first reported on 24 Nov 2026, cross-checked this
-morning): South Korea scrambles jets as Russian planes enter its
-air-defence zone near Ulleung Island; Gukesh defends the world
-chess title against Sindarov, Game 1 in Geneva; Modi and Nepal's
-PM flag off the Saryu-Kamala Express; the US blacklists Alibaba's
-Singapore unit Apex; Fiji shuts all schools for five days as the
-El Nino drought deepens; Brazil's lower house backs Lula's
-fiscal plan (footer ticker).
+Stories (all first reported on 24 Nov 2026, cross-checked over
+the full day): South Korea scrambles jets as Russian planes enter
+its air-defence zone near Ulleung Island; a Brooklyn jury finds
+Huawei guilty on 10 of 12 counts; mines hit four tankers in the
+Strait of Hormuz; Gukesh holds Sindarov to a draw in Game 1 of
+the world chess title match in Geneva; a Turkish AS-532 Cougar
+crashes near Eskisehir; gunmen hold 30 hostage in a Cartagena
+supermarket (footer ticker).
+
+Final rebuild: the round-1 version pictured four stories that
+turned out to be 23 November events (the Alibaba Apex blacklist,
+the Brazil fiscal vote, the Saryu-Kamala flag-off, Fiji's school
+closure) — all four are swapped out here for stories that belong
+to 24 November.
 """
 
 import os
@@ -197,34 +203,34 @@ def icon_chess(x, y):
     rect(x + 34, y + 68, 44, 8, GOLD)
 
 
-def icon_train(x, y):
-    rect(x + 12, y + 30, 86, 46, TEAL)
-    rect(x + 22, y + 40, 20, 16, WHITE)
-    rect(x + 50, y + 40, 20, 16, WHITE)
-    rect(x + 12, y + 76, 86, 8, INK)
-    circle(x + 30, y + 88, 10, INK)
-    circle(x + 80, y + 88, 10, INK)
-    line(x + 6, y + 100, x + 104, y + 100, GOLD, 4)
-    tri(x + 98, y + 30, x + 98, y + 76, x + 78, y + 53, TEAL)
+def icon_gavel(x, y):
+    rect(x + 22, y + 24, 62, 18, NAVY)
+    rect(x + 50, y + 24, 6, 18, GOLD)
+    line(x + 53, y + 42, x + 82, y + 88, INK, 8)
+    rect(x + 18, y + 94, 74, 6, GREY)
 
 
-def icon_chip(x, y):
-    rect(x + 30, y + 30, 50, 50, INK)
-    rect(x + 42, y + 42, 26, 26, GOLD)
-    for i in range(4):
-        rect(x + 18, y + 38 + i * 12, 12, 5, GREY)
-        rect(x + 80, y + 38 + i * 12, 12, 5, GREY)
-        rect(x + 38 + i * 12, y + 18, 5, 12, GREY)
-        rect(x + 38 + i * 12, y + 80, 5, 12, GREY)
+def icon_tanker(x, y):
+    rect(x + 14, y + 38, 18, 20, GOLD)
+    rect(x + 36, y + 38, 18, 20, TEAL)
+    rect(x + 58, y + 38, 18, 20, ORANGE)
+    rect(x + 8, y + 58, 78, 20, NAVY)
+    tri(x + 86, y + 58, x + 86, y + 78, x + 104, y + 68, NAVY)
+    rect(x + 6, y + 86, 98, 5, (40, 120, 190))
+    rect(x + 16, y + 96, 78, 5, (40, 120, 190))
 
 
-def icon_sun(x, y):
-    line(x + 55, y + 4, x + 55, y + 12, ORANGE, 4)
-    line(x + 22, y + 14, x + 30, y + 20, ORANGE, 4)
-    line(x + 88, y + 14, x + 80, y + 20, ORANGE, 4)
-    circle(x + 55, y + 45, 30, ORANGE)
-    rect(x + 14, y + 82, 82, 6, (40, 120, 190))
-    rect(x + 22, y + 94, 66, 6, (40, 120, 190))
+def icon_heli(x, y):
+    line(x + 8, y + 18, x + 102, y + 18, INK, 4)
+    rect(x + 52, y + 18, 6, 10, INK)
+    rect(x + 6, y + 40, 24, 8, TEAL)
+    tri(x + 6, y + 40, x + 6, y + 22, x + 16, y + 40, TEAL)
+    rect(x + 28, y + 28, 52, 30, TEAL)
+    tri(x + 80, y + 28, x + 80, y + 58, x + 98, y + 43, TEAL)
+    rect(x + 64, y + 34, 14, 12, WHITE)
+    line(x + 36, y + 58, x + 36, y + 72, INK, 3)
+    line(x + 70, y + 58, x + 70, y + 72, INK, 3)
+    line(x + 30, y + 72, x + 78, y + 72, INK, 4)
 
 
 def panel(y, bar, title, line1, line2, icon):
@@ -246,12 +252,12 @@ def main():
     text(32, 52, "24 NOVEMBER 2026", 8, WHITE)
     text(32, 122, "FIVE STORIES FROM FIVE REGIONS", 3, (200, 214, 230))
     panel(172, RED, "KOREA SCRAMBLES JETS", "RUSSIAN PLANES ENTER AIR DEFENCE ZONE", "NEAR ULLEUNG ISLAND. JETS UP. ALERT LIFTED.", icon_jet)
-    panel(332, NAVY2, "CHESS CROWN GAME 1", "GUKESH DEFENDS TITLE V SINDAROV IN GENEVA", "GAME 1 TODAY. BOTH 20. YOUNGEST FINAL EVER.", icon_chess)
-    panel(492, GREEN, "NEW TRAIN LINKS INDIA AND NEPAL", "MODI AND NEPAL PM FLAG OFF SARYU-KAMALA", "EXPRESS. AYODHYA TO JANAKPUR DHAM.", icon_train)
-    panel(652, TEAL, "US BLACKLISTS ALIBABA UNIT", "SINGAPORE UNIT APEX ACCUSED OVER CHIP", "DIVERSION. ALIBABA DENIES WRONGDOING.", icon_chip)
-    panel(812, ORANGE, "FIJI SHUTS SCHOOLS IN DROUGHT", "ALL SCHOOLS SHUT FOR FIVE DAYS FROM NOV 30", "AS EL NINO DROUGHT DEEPENS IN PACIFIC.", icon_sun)
+    panel(332, NAVY2, "HUAWEI GUILTY IN US TRIAL", "JURY CONVICTS ON 10 OF 12 COUNTS", "BANK FRAUD. TRADE SECRETS. IRAN SANCTIONS.", icon_gavel)
+    panel(492, GREEN, "MINES HIT TANKERS IN HORMUZ", "IRAN: FOUR TANKERS HIT BY MINES", "IRGC CLAIMS STRIKE ON CONTAINER SHIP.", icon_tanker)
+    panel(652, TEAL, "CHESS CROWN GAME 1", "GUKESH HOLDS SINDAROV TO A DRAW", "0.5-0.5 IN GENEVA. BOTH 20. YOUNGEST FINAL.", icon_chess)
+    panel(812, ORANGE, "TURKISH HELICOPTER CRASH", "AS-532 COUGAR DOWN NEAR ESKISEHIR", "FIVE CREW KILLED IN TRAINING FLIGHT.", icon_heli)
     rect(0, 976, W, 48, NAVY)
-    text(32, 990, "ALSO TODAY: BRAZIL LOWER HOUSE BACKS LULA FISCAL PLAN", 3, WHITE)
+    text(32, 990, "ALSO TODAY: GUNMEN HOLD 30 HOSTAGE IN CARTAGENA", 3, WHITE)
     out = os.path.join(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"), "entry.png")
     os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
     write_png(out)
